@@ -1,6 +1,6 @@
 # MetroQR
 
-Μια εφαρμογή Android για τη διαχείριση και σάρωση QR codes στο μετρό.
+Μια Demo εφαρμογή Android για τη διαχείριση και σάρωση QR codes.
 
 ## Χαρακτηριστικά
 
@@ -33,7 +33,3 @@ git clone https://github.com/Kontses/MetroQR.git
 ## Συνεισφορά
 
 Οι συνεισφορές είναι ευπρόσδεκτες! Παρακαλώ ανοίξτε ένα issue ή pull request για οποιαδήποτε αλλαγή.
-
-## Άδεια
-
-Αυτό το project είναι άδεια χρήσης υπό την MIT License. 
