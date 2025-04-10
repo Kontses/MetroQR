@@ -29,7 +29,3 @@ git clone https://github.com/Kontses/MetroQR.git
 3. Προσθέστε το `google-services.json` αρχείο στο φάκελο `MetroQR/`
 
 4. Εκτελέστε την εφαρμογή
-
-## Συνεισφορά
-
-Οι συνεισφορές είναι ευπρόσδεκτες! Παρακαλώ ανοίξτε ένα issue ή pull request για οποιαδήποτε αλλαγή.
