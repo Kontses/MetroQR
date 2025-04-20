@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "MetroQR"
 include(":MetroQR")
+include(":metro_qr_shared")

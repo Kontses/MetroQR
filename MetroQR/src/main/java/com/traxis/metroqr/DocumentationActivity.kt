@@ -3,7 +3,7 @@ package com.traxis.metroqr
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
+// import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.traxis.metroqr.adapters.DocumentationAdapter
 import com.traxis.metroqr.adapters.DocumentationItem
@@ -59,4 +59,4 @@ class DocumentationActivity : AppCompatActivity() {
         onBackPressedDispatcher.onBackPressed()
         return true
     }
-} 
+}

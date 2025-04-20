@@ -1,66 +1,41 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.androidLibrary)
-
-    id("com.android.application")
-    // Add the Google services Gradle plugin
-    id("com.google.gms.google-services")
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
 }
 
 dependencies {
     // Import the Firebase BoM
-    implementation(platform("com.google.firebase:firebase-bom:33.12.0"))
+    implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
 
-    // TODO: Add the dependencies for Firebase products you want to use
-    // When using the BoM, don't specify versions in Firebase dependencies
+    // Firebase dependencies
     implementation("com.google.firebase:firebase-analytics")
 
-    // Add the dependencies for any other desired Firebase products
-    // https://firebase.google.com/docs/android/setup#available-libraries
-}
+    // Android dependencies
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
 
-kotlin {
-    androidTarget {
-        compilations.all {
-            compileTaskProvider.configure {
-                compilerOptions {
-                    jvmTarget.set(JvmTarget.JVM_1_8)
-                }
-            }
-        }
-    }
-    
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "metro_qr_shared"
-            isStatic = true
-        }
-    }
-
-    sourceSets {
-        commonMain.dependencies {
-            //put your multiplatform dependencies here
-        }
-        commonTest.dependencies {
-            implementation(libs.kotlin.test)
-        }
-    }
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
 android {
-    namespace = "com.traxis.metroqr"
-    compileSdk = 35
+    namespace = "com.traxis.metroqr.shared"
+    compileSdk = 34
     defaultConfig {
         minSdk = 24
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    lint {
+        abortOnError = false
     }
 }

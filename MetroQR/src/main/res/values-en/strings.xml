@@ -14,4 +14,11 @@
     <string name="camera_permission_required">Camera permission required</string>
     <string name="error_scanning">Error while scanning</string>
     <string name="back">Back</string>
+    <string name="scan_barcode_hint">Place a barcode inside the frame to scan it</string>
+    <string name="company_label">Company</string>
+    <string name="language_label">Language</string>
+    <string name="greek_language">Greek</string>
+    <string name="english_language">English</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="documentation">Documentation</string>
 </resources> 
